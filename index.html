@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       overflow: hidden;
       color: white;
       display: flex;
@@ -166,11 +166,9 @@
   <h1>Ad Günün Mübarək, AYSEL! 🎉</h1>
   <div class="message">
      Əziz Aysel,<br><br>
-  Ad günün mübarək! Səni bu xoş gün münasibətilə təbrik edirım. Bu xüsusi gün sənə sevinc, sağlamlıq və uğurlar gətirsin. Allahdan sənə uzun ömür, güclü ruh və firavan həyat arzulayıram. Arzuların gerçəyə çevrilsin, gülüşün heç vaxt solmasın.<br><br>
-  Sən bu dünyaya sakit, təvazökar şəkildə rəng qatan insanlardansan. Sadəcə böyümür, ətrafındakılara da ruh verirsən. Var olduğun yerə dəyər qatanlardansan.<br><br>
-  Yeni yaşın sənə gözəl sürprizlər gətirsin. Sadəcə öz yolunla get – həyat sənin kimi insanlara dəyər verməyi bacarır.<br><br>
-</div>
-  <i> <b>Ad günün mübarək, Aysel. Sən varsan – bu, həqiqətən dəyərli bir şeydir.</i> </b>
+  Ad günün mübarək! Səni bu xoş gün münasibətilə təbrik edirım...
+  </div>
+  <i><b>Ad günün mübarək, Aysel. Sən varsan – bu, həqiqətən dəyərli bir şeydir.</b></i>
 
   <div class="cake">
     <div class="candle">
@@ -258,7 +256,14 @@
 
     for (let i = 0; i < 100; i++) createStar();
     setInterval(createMeteor, 2000);
-    startMic();
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const bgMusic = document.getElementById("bg-music");
+      bgMusic.play().catch((e) => {
+        console.log("Autoplay bloklandı, istifadəçidən qarşılıqlı fəaliyyət gözlənir.");
+      });
+      startMic();
+    });
   </script>
 </body>
 </html>
